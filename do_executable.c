@@ -44,7 +44,7 @@ static int			check_executable(char **com, char *executable, t_st *st)
 			if (stats.st_mode & S_IXUSR)
 				return (run_process(com, st));
 			else
-				ft_fprintf(1, "minishell: permission denied: %s.\n", executable);
+				ft_fprintf(1, RED"minishell: permission denied: %s.\n"RESET, executable);
 		}
 		i++;
 	}

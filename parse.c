@@ -22,7 +22,7 @@ static int		apply_command(char **com, char *command, t_st *st)
 	else if (do_executable_process(com, com[0], st))
 		return (0);
 	else
-		ft_printf("minishell: command not found: %s.\n", com[0]);
+		ft_printf(RED"minishell: command not found: %s.\n"RESET, com[0]);
 	return (0);
 }
 

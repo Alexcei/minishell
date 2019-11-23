@@ -13,7 +13,7 @@ static void		del_variable(int i, t_st *st)
 	int 	len;
 	int 	len_old;
 
-	new_env = (char**)ft_memalloc(sizeof(char*) * (--st->len_env) + 1);
+	new_env = (char**)ft_memalloc(sizeof(char*) * (--st->len_env + 1));
 	len = 0;
 	len_old = 0;
 	while (st->env[len_old])

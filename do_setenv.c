@@ -5,7 +5,7 @@ static void		add_variable_to_env(char **com, t_st *st)
 	char		**new_env;
 	int 		i;
 
-	new_env = (char**)ft_memalloc(sizeof(char*) * (++st->len_env) + 1);
+	new_env = (char**)ft_memalloc(sizeof(char*) * (++st->len_env + 1));
 	i = 0;
 	while (st->env[i])
 	{

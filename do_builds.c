@@ -2,14 +2,14 @@
 
 void			do_help(void)
 {
-	ft_putstr("The following commands are available:\n");
-	ft_putstr("help\n");
+	ft_putstr(GRN"The following commands are available:\n"RESET);
+	ft_putstr(CYN"help\n");
 	ft_putstr("echo\n");
 	ft_putstr("env\n");
 	ft_putstr("setenv\n");
 	ft_putstr("unsetenv\n");
 	ft_putstr("cd\n");
-	ft_putstr("exit.\n");
+	ft_putstr("exit.\n"RESET);
 }
 
 void 			do_env(char **env)

@@ -31,8 +31,9 @@ static void		output_invitation()
 	arr = ft_strsplit(path, '/');
 	while (arr[i])
 		i++;
+	ft_putstr(MAG);
 	ft_putstr(arr[i -1]);
-	ft_putstr(" > ");
+	ft_putstr(" > "RESET);
 	ft_free_char_arr(&arr);
 }
 
