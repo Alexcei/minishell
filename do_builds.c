@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-void	do_help(void)
+void			do_help(void)
 {
 	ft_putstr("The following commands are available:\n");
 	ft_putstr("help\n");
@@ -12,13 +12,13 @@ void	do_help(void)
 	ft_putstr("exit.\n");
 }
 
-void 	do_env(char **env)
+void 			do_env(char **env)
 {
 	while (*env)
 		ft_printf("%s\n", *env++);
 }
 
-void 	do_echo(char *com)
+void 			do_echo(char *com)
 {
 	if (!com)
 		return ;
@@ -28,7 +28,7 @@ void 	do_echo(char *com)
 
 static void		find_home(t_st *st)
 {
-	int 	i;
+	int 		i;
 
 	i = 0;
 	while (st->env[i])
@@ -42,7 +42,7 @@ static void		find_home(t_st *st)
 	}
 }
 
-void	do_cd(char **com, char *command, t_st *st)
+void			do_cd(char **com, t_st *st)
 {
 	count_args(com, st);
 	if (!chdir(com[1]))
@@ -62,6 +62,4 @@ void	do_cd(char **com, char *command, t_st *st)
 		else
 			ft_printf("cd: not a directory: %s.\n", com[1]);
 	}
-	(void)command;
-	(void)st;
 }

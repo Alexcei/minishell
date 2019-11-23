@@ -2,7 +2,7 @@
 
 static void		init_env(t_st *st, char **envv)
 {
-	int 	i;
+	int 		i;
 
 	st->len_env = 0;
 	st->tmp = ft_strnew(PATH_MAX);
@@ -21,10 +21,10 @@ static void		init_env(t_st *st, char **envv)
 
 static void		output_invitation()
 {
-	char	buff[BUFF_PATH + 1];
-	char	*path;
-	char 	**arr;
-	int 	i;
+	char		buff[BUFF_PATH + 1];
+	char		*path;
+	char 		**arr;
+	int 		i;
 
 	i = 0;
 	path = getcwd(buff, BUFF_PATH);
@@ -33,7 +33,7 @@ static void		output_invitation()
 		i++;
 	ft_putstr(arr[i -1]);
 	ft_putstr(" > ");
-	ft_free_char_arr(arr);
+	ft_free_char_arr(&arr);
 }
 
 static void		handler(int sig)
@@ -48,6 +48,7 @@ static void		handler(int sig)
 
 static int		read_line(t_st *st)
 {
+	st->line = NULL;
 	get_next_line(0, &st->line);
 	if (st->line)
 		return (0);
@@ -55,9 +56,9 @@ static int		read_line(t_st *st)
 	return (1);
 }
 
-int		main(int ac, char **av, char **envv)
+int				main(int ac, char **av, char **envv)
 {
-	t_st	st;
+	t_st		st;
 
 	ft_bzero(&st, sizeof(t_st));
 	st.env = NULL;
@@ -71,7 +72,7 @@ int		main(int ac, char **av, char **envv)
 		if (parse_commands(&st))
 			break ;
 	}
-	//free_st(&st);
+	free_st(&st);
 	(void)ac;
 	(void)av;
 	return (0);

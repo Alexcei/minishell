@@ -1,6 +1,6 @@
 #include "minishell.h"
 
-void	count_args(char **com, t_st *st)
+void			count_args(char **com, t_st *st)
 {
 	st->count_args = 0;
 	while (com[st->count_args])
@@ -27,13 +27,13 @@ static void		del_variable(int i, t_st *st)
 		}
 		len_old++;
 	}
-	ft_free_char_arr(st->env);
+	ft_free_char_arr(&st->env);
 	st->env = new_env;
 }
 
 static int		find_and_del_variable(char **com, t_st *st)
 {
-	int 	i;
+	int 		i;
 
 	i = 0;
 	ft_bzero(st->tmp, ft_strlen(st->tmp));
@@ -51,7 +51,7 @@ static int		find_and_del_variable(char **com, t_st *st)
 	return (1);
 }
 
-void 	do_unsetenv(char **com, t_st *st)
+void 			do_unsetenv(char **com, t_st *st)
 {
 	count_args(com, st);
 	if (st->count_args > 2)

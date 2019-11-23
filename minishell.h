@@ -26,7 +26,7 @@ typedef struct	s_st
 void			do_help(void);
 void			do_env(char **env);
 void			do_echo(char *com);
-void			do_cd(char **com, char *command, t_st *st);
+void			do_cd(char **com, t_st *st);
 
 /*
 **				do_executable.c
@@ -53,6 +53,6 @@ int				parse_commands(t_st *st);
 **				utils.c
 */
 void			free_st(t_st *st);
-void			ft_free_char_arr(char **arr);
+void			ft_free_char_arr(char ***arr);
 
 #endif

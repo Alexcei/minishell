@@ -3,13 +3,16 @@
 static int		apply_command(char **com, char *command, t_st *st)
 {
 	if (ft_strequ(com[0], "exit"))
+	{
+		free_st(st);
 		exit(0);
+	}
 	else if (ft_strequ(com[0], "help"))
 		do_help();
 	else if (ft_strequ(com[0], "echo"))
 		do_echo(command + 5);
 	else if (ft_strequ(com[0], "cd"))
-		do_cd(com, command + 3, st);
+		do_cd(com, st);
 	else if (ft_strequ(com[0], "env"))
 		do_env(st->env);
 	else if (ft_strequ(com[0], "setenv"))
@@ -32,17 +35,17 @@ static int		parse_com(char *command, t_st *st)
 	{
 		if (apply_command(com, command, st))
 		{
-			//ft_free_char_arr(com);
+			ft_free_char_arr(&com);
 			return (1);
 		}
 	}
-	ft_free_char_arr(com);
+	ft_free_char_arr(&com);
 	return (0);
 }
 
-int 	parse_commands(t_st *st)
+int 			parse_commands(t_st *st)
 {
-	int 	i;
+	int 		i;
 
 	i = 0;
 	st->commands = ft_strsplit(st->line, ';');
@@ -51,10 +54,10 @@ int 	parse_commands(t_st *st)
 	{
 		if (parse_com(st->commands[i++], st))
 		{
-			ft_free_char_arr(st->commands);
+			ft_free_char_arr(&st->commands);
 			return (1);
 		}
 	}
-	ft_free_char_arr(st->commands);
+	ft_free_char_arr(&st->commands);
 	return (0);
 }
