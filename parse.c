@@ -3,7 +3,7 @@
 static int		apply_command(char **com, char *command, t_st *st)
 {
 	if (ft_strequ(com[0], "exit"))
-		return (1);
+		exit(0);
 	else if (ft_strequ(com[0], "help"))
 		do_help();
 	else if (ft_strequ(com[0], "echo"))
@@ -19,7 +19,7 @@ static int		apply_command(char **com, char *command, t_st *st)
 	else if (do_executable_process(com, com[0], st))
 		return (0);
 	else
-		ft_printf("zsh: command not found: %s\n", com[0]);
+		ft_printf("minishell: command not found: %s.\n", com[0]);
 	return (0);
 }
 

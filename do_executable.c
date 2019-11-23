@@ -19,12 +19,12 @@ static int		run_process(char **com, char *executable, t_st *st)
 	{
 		if (execve(st->tmp, com, st->env) == -1)
 		{
-			ft_fprintf(1, "zsh: permission denied: %s", executable);
+			ft_fprintf(1, "minishell: permission denied: %s.\n", executable);
 			return (1);
 		}
 	}
 	else if (pid < 0)
-		ft_fprintf(1, "Failed to fork.");
+		ft_fprintf(1, "failed to fork.\n");
 	else
 		wait(&pid);
 	return (1);

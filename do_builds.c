@@ -9,7 +9,7 @@ void	do_help(void)
 	ft_putstr("setenv\n");
 	ft_putstr("unsetenv\n");
 	ft_putstr("cd\n");
-	ft_putstr("exit\n");
+	ft_putstr("exit.\n");
 }
 
 void 	do_env(char **env)
@@ -48,19 +48,19 @@ void	do_cd(char **com, char *command, t_st *st)
 	if (!chdir(com[1]))
 		return ;
 	if (st->count_args > 3)
-		ft_printf("cd: too many arguments\n");
+		ft_printf("cd: too many arguments.\n");
 	else if (st->count_args > 2)
-		ft_printf("cd: string not in pwd: %s\n", com[1]);
+		ft_printf("cd: string not in pwd: %s.\n", com[1]);
 	else if (com[1])
 	{
 		if (ft_strequ(com[1], "~"))
 			find_home(st);
 		else if (access(com[1], F_OK) == -1)
-			ft_printf("cd: no such file or directory: %s\n", com[1]);
+			ft_printf("cd: no such file or directory: %s.\n", com[1]);
 		else if (access(com[1], R_OK) == -1)
-			ft_printf("permission denied: %s\n", com[1]);
+			ft_printf("cd: permission denied: %s.\n", com[1]);
 		else
-			ft_printf("cd: not a directory: %s\n", com[1]);
+			ft_printf("cd: not a directory: %s.\n", com[1]);
 	}
 	(void)command;
 	(void)st;

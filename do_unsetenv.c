@@ -61,6 +61,6 @@ void 	do_unsetenv(char **com, t_st *st)
 	else
 	{
 		if (find_and_del_variable(com, st))
-			ft_printf("unsetenv: variable not found: %s\n", com[1]);
+			ft_printf("unsetenv: variable not found: %s.\n", com[1]);
 	}
 }

@@ -38,7 +38,7 @@ limits.h
 sys/wait.h
 -
 
-/Users/bpole/CLionProjects/my_minishell/utils.c
+/Users/bpole/CLionProjects/my_minishell/parse.c
 minishell.h
 /Users/bpole/CLionProjects/my_minishell/minishell.h
 
