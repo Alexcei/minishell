@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/23 23:41:42 by bpole             #+#    #+#             */
+/*   Updated: 2019/11/24 00:39:45 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 static int		apply_command(char **com, char *command, t_st *st)
@@ -43,9 +55,9 @@ static int		parse_com(char *command, t_st *st)
 	return (0);
 }
 
-int 			parse_commands(t_st *st)
+int				parse_commands(t_st *st)
 {
-	int 		i;
+	int			i;
 
 	i = 0;
 	st->commands = ft_strsplit(st->line, ';');

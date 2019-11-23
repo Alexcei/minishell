@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   do_unsetenv.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/23 23:36:02 by bpole             #+#    #+#             */
+/*   Updated: 2019/11/24 00:46:57 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 void			count_args(char **com, t_st *st)
@@ -10,8 +22,8 @@ void			count_args(char **com, t_st *st)
 static void		del_variable(int i, t_st *st)
 {
 	char	**new_env;
-	int 	len;
-	int 	len_old;
+	int		len;
+	int		len_old;
 
 	new_env = (char**)ft_memalloc(sizeof(char*) * (--st->len_env + 1));
 	len = 0;
@@ -33,7 +45,7 @@ static void		del_variable(int i, t_st *st)
 
 static int		find_and_del_variable(char **com, t_st *st)
 {
-	int 		i;
+	int			i;
 
 	i = 0;
 	ft_bzero(st->tmp, ft_strlen(st->tmp));
@@ -51,16 +63,16 @@ static int		find_and_del_variable(char **com, t_st *st)
 	return (1);
 }
 
-void 			do_unsetenv(char **com, t_st *st)
+void			do_unsetenv(char **com, t_st *st)
 {
 	count_args(com, st);
 	if (st->count_args > 2)
-		ft_printf("unsetenv: too many arguments.\n");
+		ft_printf(RED"unsetenv: too many arguments.\n"RESET);
 	else if (st->count_args == 1)
-		ft_printf("unsetenv: too few arguments.\n");
+		ft_printf(RED"unsetenv: too few arguments.\n"RESET);
 	else
 	{
 		if (find_and_del_variable(com, st))
-			ft_printf("unsetenv: variable not found: %s.\n", com[1]);
+			ft_printf(RED"unsetenv: variable not found: %s.\n"RESET, com[1]);
 	}
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   do_executable.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/23 23:32:45 by bpole             #+#    #+#             */
+/*   Updated: 2019/11/24 00:42:00 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 static void			built_handler(int sig)
@@ -29,7 +41,7 @@ static int			run_process(char **com, t_st *st)
 
 static int			check_executable(char **com, char *executable, t_st *st)
 {
-	int 			i;
+	int				i;
 	struct stat		stats;
 
 	i = 0;
@@ -44,19 +56,21 @@ static int			check_executable(char **com, char *executable, t_st *st)
 			if (stats.st_mode & S_IXUSR)
 				return (run_process(com, st));
 			else
-				ft_fprintf(1, RED"minishell: permission denied: %s.\n"RESET, executable);
+				ft_fprintf(1, RED"minishell: permission denied: %s.\n"RESET,
+						executable);
 		}
 		i++;
 	}
 	return (0);
 }
 
-int 				do_executable_process(char **com, char *executable, t_st *st)
+int					do_executable_process(char **com,
+										char *executable, t_st *st)
 {
 	struct stat		stats;
 
 	if (executable[0] == '.' && executable[1] == '/' &&
-		lstat(executable, &stats) != -1 && stats.st_mode & S_IXUSR)
+			lstat(executable, &stats) != -1 && stats.st_mode & S_IXUSR)
 		return (run_process(com, st));
 	if (check_executable(com, executable, st))
 		return (1);

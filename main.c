@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/23 23:37:15 by bpole             #+#    #+#             */
+/*   Updated: 2019/11/24 00:37:57 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 static void		init_env(t_st *st, char **envv)
 {
-	int 		i;
+	int			i;
 
 	st->len_env = 0;
 	st->tmp = ft_strnew(PATH_MAX);
@@ -19,12 +31,12 @@ static void		init_env(t_st *st, char **envv)
 	}
 }
 
-static void		output_invitation()
+static void		output_invitation(void)
 {
 	char		buff[BUFF_PATH + 1];
 	char		*path;
-	char 		**arr;
-	int 		i;
+	char		**arr;
+	int			i;
 
 	i = 0;
 	path = getcwd(buff, BUFF_PATH);
@@ -32,7 +44,7 @@ static void		output_invitation()
 	while (arr[i])
 		i++;
 	ft_putstr(MAG);
-	ft_putstr(arr[i -1]);
+	ft_putstr(arr[i - 1]);
 	ft_putstr(" > "RESET);
 	ft_free_char_arr(&arr);
 }

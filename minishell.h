@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   minishell.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/23 23:39:18 by bpole             #+#    #+#             */
+/*   Updated: 2019/11/24 00:31:38 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef MINISHELL_H
 # define MINISHELL_H
 
 # include "ft_printf/ft_printf.h"
 # include <signal.h>
-#include <sys/stat.h>
-#include <limits.h>
+# include <sys/stat.h>
+# include <limits.h>
 # include <sys/wait.h>
 
-#define BUFF_PATH 4048
+# define BUFF_PATH 4048
 
 # define CYN	"\x1B[36m"
 # define RED	"\x1B[31m"
@@ -20,13 +32,13 @@
 
 typedef struct	s_st
 {
-	char 		**env;
-	char 		*line;
-	char 		**commands;
+	char		**env;
+	char		*line;
+	char		**commands;
 	char		**path_bin;
-	char 		*tmp;
+	char		*tmp;
 	int			len_env;
-	int 		count_args;
+	int			count_args;
 }				t_st;
 
 /*
@@ -51,7 +63,7 @@ void			do_setenv(char **com, t_st *st);
 **				do_unsetenv.c
 */
 void			count_args(char **com, t_st *st);
-void 			do_unsetenv(char **com, t_st *st);
+void			do_unsetenv(char **com, t_st *st);
 
 /*
 **				parse.c

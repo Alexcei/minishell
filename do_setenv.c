@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   do_setenv.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/23 23:34:47 by bpole             #+#    #+#             */
+/*   Updated: 2019/11/24 00:52:45 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 static void		add_variable_to_env(char **com, t_st *st)
 {
 	char		**new_env;
-	int 		i;
+	int			i;
 
 	new_env = (char**)ft_memalloc(sizeof(char*) * (++st->len_env + 1));
 	i = 0;
@@ -22,7 +34,7 @@ static void		add_variable_to_env(char **com, t_st *st)
 
 static void		chang_variable(char **com, int i, t_st *st)
 {
-	char		 *tmp;
+	char		*tmp;
 
 	tmp = st->env[i];
 	if (st->count_args > 2)
@@ -34,7 +46,7 @@ static void		chang_variable(char **com, int i, t_st *st)
 
 static void		find_changing_variable(char **com, t_st *st)
 {
-	int 		i;
+	int			i;
 
 	i = 0;
 	ft_bzero(st->tmp, ft_strlen(st->tmp));
@@ -56,6 +68,6 @@ void			do_setenv(char **com, t_st *st)
 {
 	count_args(com, st);
 	if (st->count_args > 3)
-		ft_printf("setenv: too many arguments.\n");
+		ft_printf(RED"setenv: too many arguments.\n"RESET);
 	find_changing_variable(com, st);
 }
