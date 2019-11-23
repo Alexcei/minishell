@@ -6,17 +6,18 @@
 #    By: bpole <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/11 10:08:31 by bpole             #+#    #+#              #
-#    Updated: 2019/11/20 15:29:58 by bpole            ###   ########.fr        #
+#    Updated: 2019/11/23 14:15:23 by bpole            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = minishell
 
-
 LIB_DIR = ./ft_printf/
+
 LIBFT = $(LIB_DIR)libftprintf.a
 
-SRC = ./main.c ./do_builds.c ./utils.c
+SRC = main.c do_builds.c utils.c do_unsetenv.c \
+        do_setenv.c do_executable.c parse.c
 
 OBJ = $(SRC:.c=.o)
 

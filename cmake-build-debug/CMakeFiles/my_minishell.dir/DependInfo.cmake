@@ -5,6 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/bpole/CLionProjects/my_minishell/do_builds.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/do_builds.c.o"
+  "/Users/bpole/CLionProjects/my_minishell/do_executable.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/do_executable.c.o"
+  "/Users/bpole/CLionProjects/my_minishell/do_setenv.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/do_setenv.c.o"
+  "/Users/bpole/CLionProjects/my_minishell/do_unsetenv.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/do_unsetenv.c.o"
   "/Users/bpole/CLionProjects/my_minishell/ft_printf/bonus_wildcard.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/ft_printf/bonus_wildcard.c.o"
   "/Users/bpole/CLionProjects/my_minishell/ft_printf/ft_fprintf.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/ft_printf/ft_fprintf.c.o"
   "/Users/bpole/CLionProjects/my_minishell/ft_printf/ft_printf.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/ft_printf/ft_printf.c.o"
@@ -82,6 +85,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/bpole/CLionProjects/my_minishell/ft_printf/output_x.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/ft_printf/output_x.c.o"
   "/Users/bpole/CLionProjects/my_minishell/ft_printf/parser.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/ft_printf/parser.c.o"
   "/Users/bpole/CLionProjects/my_minishell/main.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/main.c.o"
+  "/Users/bpole/CLionProjects/my_minishell/parse.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/parse.c.o"
   "/Users/bpole/CLionProjects/my_minishell/utils.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

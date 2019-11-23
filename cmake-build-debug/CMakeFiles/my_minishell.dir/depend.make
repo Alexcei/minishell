@@ -6,6 +6,21 @@ CMakeFiles/my_minishell.dir/do_builds.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/my_minishell.dir/do_builds.c.o: ../ft_printf/libft/libft.h
 CMakeFiles/my_minishell.dir/do_builds.c.o: ../minishell.h
 
+CMakeFiles/my_minishell.dir/do_executable.c.o: ../do_executable.c
+CMakeFiles/my_minishell.dir/do_executable.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/my_minishell.dir/do_executable.c.o: ../ft_printf/libft/libft.h
+CMakeFiles/my_minishell.dir/do_executable.c.o: ../minishell.h
+
+CMakeFiles/my_minishell.dir/do_setenv.c.o: ../do_setenv.c
+CMakeFiles/my_minishell.dir/do_setenv.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/my_minishell.dir/do_setenv.c.o: ../ft_printf/libft/libft.h
+CMakeFiles/my_minishell.dir/do_setenv.c.o: ../minishell.h
+
+CMakeFiles/my_minishell.dir/do_unsetenv.c.o: ../do_unsetenv.c
+CMakeFiles/my_minishell.dir/do_unsetenv.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/my_minishell.dir/do_unsetenv.c.o: ../ft_printf/libft/libft.h
+CMakeFiles/my_minishell.dir/do_unsetenv.c.o: ../minishell.h
+
 CMakeFiles/my_minishell.dir/ft_printf/bonus_wildcard.c.o: ../ft_printf/bonus_wildcard.c
 CMakeFiles/my_minishell.dir/ft_printf/bonus_wildcard.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/my_minishell.dir/ft_printf/bonus_wildcard.c.o: ../ft_printf/libft/libft.h
@@ -237,6 +252,11 @@ CMakeFiles/my_minishell.dir/main.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/my_minishell.dir/main.c.o: ../ft_printf/libft/libft.h
 CMakeFiles/my_minishell.dir/main.c.o: ../main.c
 CMakeFiles/my_minishell.dir/main.c.o: ../minishell.h
+
+CMakeFiles/my_minishell.dir/parse.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/my_minishell.dir/parse.c.o: ../ft_printf/libft/libft.h
+CMakeFiles/my_minishell.dir/parse.c.o: ../minishell.h
+CMakeFiles/my_minishell.dir/parse.c.o: ../parse.c
 
 CMakeFiles/my_minishell.dir/utils.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/my_minishell.dir/utils.c.o: ../ft_printf/libft/libft.h

@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/my_minishell.dir/do_builds.c.o"
+  "CMakeFiles/my_minishell.dir/do_executable.c.o"
+  "CMakeFiles/my_minishell.dir/do_setenv.c.o"
+  "CMakeFiles/my_minishell.dir/do_unsetenv.c.o"
   "CMakeFiles/my_minishell.dir/ft_printf/bonus_wildcard.c.o"
   "CMakeFiles/my_minishell.dir/ft_printf/ft_fprintf.c.o"
   "CMakeFiles/my_minishell.dir/ft_printf/ft_printf.c.o"
@@ -77,6 +80,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_minishell.dir/ft_printf/output_x.c.o"
   "CMakeFiles/my_minishell.dir/ft_printf/parser.c.o"
   "CMakeFiles/my_minishell.dir/main.c.o"
+  "CMakeFiles/my_minishell.dir/parse.c.o"
   "CMakeFiles/my_minishell.dir/utils.c.o"
   "my_minishell.pdb"
   "my_minishell"

@@ -150,6 +150,87 @@ do_builds.c.s:
 	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/do_builds.c.s
 .PHONY : do_builds.c.s
 
+do_executable.o: do_executable.c.o
+
+.PHONY : do_executable.o
+
+# target to build an object file
+do_executable.c.o:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/do_executable.c.o
+.PHONY : do_executable.c.o
+
+do_executable.i: do_executable.c.i
+
+.PHONY : do_executable.i
+
+# target to preprocess a source file
+do_executable.c.i:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/do_executable.c.i
+.PHONY : do_executable.c.i
+
+do_executable.s: do_executable.c.s
+
+.PHONY : do_executable.s
+
+# target to generate assembly for a file
+do_executable.c.s:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/do_executable.c.s
+.PHONY : do_executable.c.s
+
+do_setenv.o: do_setenv.c.o
+
+.PHONY : do_setenv.o
+
+# target to build an object file
+do_setenv.c.o:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/do_setenv.c.o
+.PHONY : do_setenv.c.o
+
+do_setenv.i: do_setenv.c.i
+
+.PHONY : do_setenv.i
+
+# target to preprocess a source file
+do_setenv.c.i:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/do_setenv.c.i
+.PHONY : do_setenv.c.i
+
+do_setenv.s: do_setenv.c.s
+
+.PHONY : do_setenv.s
+
+# target to generate assembly for a file
+do_setenv.c.s:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/do_setenv.c.s
+.PHONY : do_setenv.c.s
+
+do_unsetenv.o: do_unsetenv.c.o
+
+.PHONY : do_unsetenv.o
+
+# target to build an object file
+do_unsetenv.c.o:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/do_unsetenv.c.o
+.PHONY : do_unsetenv.c.o
+
+do_unsetenv.i: do_unsetenv.c.i
+
+.PHONY : do_unsetenv.i
+
+# target to preprocess a source file
+do_unsetenv.c.i:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/do_unsetenv.c.i
+.PHONY : do_unsetenv.c.i
+
+do_unsetenv.s: do_unsetenv.c.s
+
+.PHONY : do_unsetenv.s
+
+# target to generate assembly for a file
+do_unsetenv.c.s:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/do_unsetenv.c.s
+.PHONY : do_unsetenv.c.s
+
 ft_printf/bonus_wildcard.o: ft_printf/bonus_wildcard.c.o
 
 .PHONY : ft_printf/bonus_wildcard.o
@@ -2229,6 +2310,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/main.c.s
 .PHONY : main.c.s
 
+parse.o: parse.c.o
+
+.PHONY : parse.o
+
+# target to build an object file
+parse.c.o:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/parse.c.o
+.PHONY : parse.c.o
+
+parse.i: parse.c.i
+
+.PHONY : parse.i
+
+# target to preprocess a source file
+parse.c.i:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/parse.c.i
+.PHONY : parse.c.i
+
+parse.s: parse.c.s
+
+.PHONY : parse.s
+
+# target to generate assembly for a file
+parse.c.s:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/parse.c.s
+.PHONY : parse.c.s
+
 utils.o: utils.c.o
 
 .PHONY : utils.o
@@ -2268,6 +2376,15 @@ help:
 	@echo "... do_builds.o"
 	@echo "... do_builds.i"
 	@echo "... do_builds.s"
+	@echo "... do_executable.o"
+	@echo "... do_executable.i"
+	@echo "... do_executable.s"
+	@echo "... do_setenv.o"
+	@echo "... do_setenv.i"
+	@echo "... do_setenv.s"
+	@echo "... do_unsetenv.o"
+	@echo "... do_unsetenv.i"
+	@echo "... do_unsetenv.s"
 	@echo "... ft_printf/bonus_wildcard.o"
 	@echo "... ft_printf/bonus_wildcard.i"
 	@echo "... ft_printf/bonus_wildcard.s"
@@ -2499,6 +2616,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... parse.o"
+	@echo "... parse.i"
+	@echo "... parse.s"
 	@echo "... utils.o"
 	@echo "... utils.i"
 	@echo "... utils.s"

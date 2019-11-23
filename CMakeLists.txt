@@ -11,4 +11,4 @@ file(GLOB FILES
 
 set(CMAKE_C_STANDARD 99)
 add_definitions(-Wall -Wextra -Werror)
-add_executable(my_minishell ${FILES} do_builds.c)
+add_executable(my_minishell ${FILES})

@@ -33,4 +33,12 @@ signal.h
 -
 sys/stat.h
 -
+limits.h
+-
+sys/wait.h
+-
+
+/Users/bpole/CLionProjects/my_minishell/utils.c
+minishell.h
+/Users/bpole/CLionProjects/my_minishell/minishell.h
 
