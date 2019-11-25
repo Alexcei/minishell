@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:37:15 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/24 00:37:57 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/25 17:04:17 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static void		init_env(t_st *st, char **envv)
 {
 	int			i;
+	char        *tmp;
 
 	st->len_env = 0;
 	st->tmp = ft_strnew(PATH_MAX);
@@ -29,6 +30,8 @@ static void		init_env(t_st *st, char **envv)
 			st->path_bin = ft_strsplit(st->env[i] + 5, ':');
 		i++;
 	}
+	tmp = find_env_valiable(st, "HOME=");
+    st->old_dir = ft_strdup(tmp);
 }
 
 static void		output_invitation(void)
@@ -41,11 +44,12 @@ static void		output_invitation(void)
 	i = 0;
 	path = getcwd(buff, BUFF_PATH);
 	arr = ft_strsplit(path, '/');
-	while (arr[i])
+	while (arr && arr[i])
 		i++;
-	ft_putstr(MAG);
-	ft_putstr(arr[i - 1]);
-	ft_putstr(" > "RESET);
+	if (arr && i && arr[i - 1])
+		ft_printf(MAG"%s > "RESET, arr[i - 1]);
+	else
+		ft_printf(MAG"/ > "RESET);
 	ft_free_char_arr(&arr);
 }
 

@@ -33,7 +33,7 @@ static int			run_process(char **com, t_st *st)
 			return (1);
 	}
 	else if (pid < 0)
-		ft_fprintf(1, "failed to fork.\n");
+		ft_fprintf(1, RED"failed to fork."RESET"\n");
 	else
 		wait(&pid);
 	return (1);
@@ -56,7 +56,7 @@ static int			check_executable(char **com, char *executable, t_st *st)
 			if (stats.st_mode & S_IXUSR)
 				return (run_process(com, st));
 			else
-				ft_fprintf(1, RED"minishell: permission denied: %s.\n"RESET,
+				ft_fprintf(1, RED"minishell: permission denied: %s."RESET"\n",
 						executable);
 		}
 		i++;

@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:34:47 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/24 00:52:45 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/24 12:43:48 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,10 @@ static void		find_changing_variable(char **com, t_st *st)
 void			do_setenv(char **com, t_st *st)
 {
 	count_args(com, st);
-	if (st->count_args > 3)
-		ft_printf(RED"setenv: too many arguments.\n"RESET);
-	find_changing_variable(com, st);
+	if (st->count_args == 1)
+		ft_printf(RED"setenv: too few arguments."RESET"\n");
+	else if (st->count_args > 3)
+		ft_printf(RED"setenv: too many arguments."RESET"\n");
+	else
+		find_changing_variable(com, st);
 }

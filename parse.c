@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:41:42 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/24 00:39:45 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/25 15:52:59 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static int		apply_command(char **com, char *command, t_st *st)
 	else if (ft_strequ(com[0], "help"))
 		do_help();
 	else if (ft_strequ(com[0], "echo"))
-		do_echo(command + 5);
+		do_echo(command, st);
 	else if (ft_strequ(com[0], "cd"))
 		do_cd(com, st);
 	else if (ft_strequ(com[0], "env"))
@@ -34,7 +34,7 @@ static int		apply_command(char **com, char *command, t_st *st)
 	else if (do_executable_process(com, com[0], st))
 		return (0);
 	else
-		ft_printf(RED"minishell: command not found: %s.\n"RESET, com[0]);
+		ft_printf(RED"minishell: command not found: %s."RESET"\n", com[0]);
 	return (0);
 }
 
@@ -42,7 +42,7 @@ static int		parse_com(char *command, t_st *st)
 {
 	char	**com;
 
-	com = ft_strsplit(command, ' ');
+	com = ft_double_split(command, ' ', '\t');
 	if (com[0])
 	{
 		if (apply_command(com, command, st))

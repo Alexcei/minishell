@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:30:03 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/24 00:50:25 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/25 17:26:11 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,48 +30,46 @@ void			do_env(char **env)
 		ft_printf("%s\n", *env++);
 }
 
-void			do_echo(char *com)
+static int     put_env_variable(char *com, t_st *st)
 {
-	if (!com)
-		return ;
-	ft_putstr(com);
-	ft_putstr("\n");
-}
-
-static void		find_home(t_st *st)
-{
-	int			i;
-
-	i = 0;
-	while (st->env[i])
+	if (*com == '$' && *(com + 1))
 	{
-		if (ft_strnequ(st->env[i], "HOME=", 5))
+		ft_strclr(st->tmp);
+		ft_strcat(st->tmp, com + 1);
+		ft_strcat(st->tmp, "=");
+		if (find_env_valiable(st, st->tmp))
 		{
-			chdir(st->env[i] + 5);
-			return ;
+			ft_putstr(find_env_valiable(st, st->tmp));
+			ft_putstr("\n");
 		}
-		i++;
+		return (1);
 	}
+	else
+		return (0);
 }
 
-void			do_cd(char **com, t_st *st)
+void			do_echo(char *com, t_st *st)
 {
-	count_args(com, st);
-	if (!chdir(com[1]))
-		return ;
-	if (st->count_args > 3)
-		ft_printf(RED"cd: too many arguments.\n"RESET);
-	else if (st->count_args > 2)
-		ft_printf(RED"cd: string not in pwd: %s.\n"RESET, com[1]);
-	else if (com[1])
-	{
-		if (ft_strequ(com[1], "~"))
-			find_home(st);
-		else if (access(com[1], F_OK) == -1)
-			ft_printf(RED"cd: no such file or directory: %s.\n"RESET, com[1]);
-		else if (access(com[1], R_OK) == -1)
-			ft_printf(RED"cd: permission denied: %s.\n"RESET, com[1]);
-		else
-			ft_printf(RED"cd: not a directory: %s.\n"RESET, com[1]);
-	}
+    while (*com && ft_isblank(*com))
+        com++;
+    com += 4;
+    while (*com && ft_isblank(*com))
+        com++;
+    if (put_env_variable(com, st))
+        return ;
+    while (*com)
+    {
+        if (*com == 92 && *(com + 1))
+        {
+            if (*(com + 1)  == 34 || *(com + 1) == 39)
+            {
+                ft_putchar(*(com + 1));
+                com++;
+            }
+        }
+        else if (*com != 34 && *com != 39)
+            ft_putchar(*com);
+        com++;
+    }
+	ft_putstr("\n");
 }
