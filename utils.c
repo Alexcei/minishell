@@ -50,6 +50,6 @@ char		*find_env_valiable(t_st *st, char *env_variable)
             return(st->env[i] + len);
         i++;
     }
-    ft_printf(RED"variable \"%.*s\" not found."RESET"\n", len - 1, env_variable);
+    ft_printf(RED"variable \"%.*s\" not found"RESET"\n", len - 1, env_variable);
     return (NULL);
 }

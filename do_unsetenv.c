@@ -67,12 +67,12 @@ void			do_unsetenv(char **com, t_st *st)
 {
 	count_args(com, st);
 	if (st->count_args > 2)
-		ft_printf(RED"unsetenv: too many arguments."RESET"\n");
+		ft_printf(RED"unsetenv: too many arguments"RESET"\n");
 	else if (st->count_args == 1)
-		ft_printf(RED"unsetenv: too few arguments."RESET"\n");
+		ft_printf(RED"unsetenv: too few arguments"RESET"\n");
 	else
 	{
 		if (find_and_del_variable(com, st))
-			ft_printf(RED"unsetenv: variable not found: %s."RESET"\n", com[1]);
+			ft_printf(RED"unsetenv: variable not found: %s"RESET"\n", com[1]);
 	}
 }

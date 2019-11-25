@@ -12,11 +12,11 @@ static void     open_dir(char *dir, t_st *st)
         st->old_dir = ft_strdup(path);
     }
     else if (access(dir, F_OK) == -1)
-        ft_printf(RED"cd: no such file or directory: %s."RESET"\n", dir);
+        ft_printf(RED"cd: no such file or directory: %s"RESET"\n", dir);
     else if (access(dir, R_OK) == -1)
-        ft_printf(RED"cd: permission denied: %s."RESET"\n", dir);
+        ft_printf(RED"cd: permission denied: %s"RESET"\n", dir);
     else
-        ft_printf(RED"cd: not a directory: %s."RESET"\n", dir);
+        ft_printf(RED"cd: not a directory: %s"RESET"\n", dir);
 }
 
 void			do_cd(char **com, t_st *st)
@@ -25,9 +25,9 @@ void			do_cd(char **com, t_st *st)
     if (st->count_args == 1)
         open_dir(find_env_valiable(st, "HOME="), st);
     else if (st->count_args > 3)
-        ft_printf(RED"cd: too many arguments."RESET"\n");
+        ft_printf(RED"cd: too many arguments"RESET"\n");
     else if (st->count_args > 2)
-        ft_printf(RED"cd: string not in pwd: %s."RESET"\n", com[1]);
+        ft_printf(RED"cd: string not in pwd: %s"RESET"\n", com[1]);
     else
     {
         if (ft_strequ(com[1], "~"))

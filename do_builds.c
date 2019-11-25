@@ -21,7 +21,7 @@ void			do_help(void)
 	ft_putstr("setenv\n");
 	ft_putstr("unsetenv\n");
 	ft_putstr("cd\n");
-	ft_putstr("exit.\n"RESET);
+	ft_putstr("exit\n"RESET);
 }
 
 void			do_env(char **env)

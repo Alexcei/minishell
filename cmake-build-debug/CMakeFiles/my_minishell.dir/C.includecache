@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/bpole/CLionProjects/my_minishell/do_builds.c
+/Users/bpole/CLionProjects/my_minishell/do_cd.c
+minishell.h
+/Users/bpole/CLionProjects/my_minishell/minishell.h
+
+/Users/bpole/CLionProjects/my_minishell/do_executable.c
 minishell.h
 /Users/bpole/CLionProjects/my_minishell/minishell.h
 
@@ -37,6 +41,10 @@ limits.h
 -
 sys/wait.h
 -
+
+/Users/bpole/CLionProjects/my_minishell/parse.c
+minishell.h
+/Users/bpole/CLionProjects/my_minishell/minishell.h
 
 /Users/bpole/CLionProjects/my_minishell/utils.c
 minishell.h

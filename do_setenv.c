@@ -68,9 +68,9 @@ void			do_setenv(char **com, t_st *st)
 {
 	count_args(com, st);
 	if (st->count_args == 1)
-		ft_printf(RED"setenv: too few arguments."RESET"\n");
+		ft_printf(RED"setenv: too few arguments"RESET"\n");
 	else if (st->count_args > 3)
-		ft_printf(RED"setenv: too many arguments."RESET"\n");
+		ft_printf(RED"setenv: too many arguments"RESET"\n");
 	else
 		find_changing_variable(com, st);
 }

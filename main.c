@@ -26,8 +26,6 @@ static void		init_env(t_st *st, char **envv)
 	while (envv[i])
 	{
 		st->env[i] = ft_strdup(envv[i]);
-		if (ft_strnequ(st->env[i], "PATH=", 5))
-			st->path_bin = ft_strsplit(st->env[i] + 5, ':');
 		i++;
 	}
 	tmp = find_env_valiable(st, "HOME=");
