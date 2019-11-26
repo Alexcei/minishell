@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:30:03 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/26 10:40:07 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/26 12:40:37 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void			do_env(char **env)
 		ft_printf("%s\n", *env++);
 }
 
-static int     put_env_variable(char *com, t_st *st)
+static int		put_env_variable(char *com, t_st *st)
 {
 	if (*com == '$' && *(com + 1))
 	{
@@ -50,26 +50,26 @@ static int     put_env_variable(char *com, t_st *st)
 
 void			do_echo(char *com, t_st *st)
 {
-    while (*com && ft_isblank(*com))
-        com++;
-    com += 4;
-    while (*com && ft_isblank(*com))
-        com++;
-    if (put_env_variable(com, st))
-        return ;
-    while (*com)
-    {
-        if (*com == 92 && *(com + 1))
-        {
-            if (*(com + 1)  == 34 || *(com + 1) == 39)
-            {
-                ft_putchar(*(com + 1));
-                com++;
-            }
-        }
-        else if (*com != 34 && *com != 39)
-            ft_putchar(*com);
-        com++;
-    }
+	while (*com && ft_isblank(*com))
+		com++;
+	com += 4;
+	while (*com && ft_isblank(*com))
+		com++;
+	if (put_env_variable(com, st))
+		return ;
+	while (*com)
+	{
+		if (*com == 92 && *(com + 1))
+		{
+			if (*(com + 1) == 34 || *(com + 1) == 39)
+			{
+				ft_putchar(*(com + 1));
+				com++;
+			}
+		}
+		else if (*com != 34 && *com != 39)
+			ft_putchar(*com);
+		com++;
+	}
 	ft_putstr("\n");
 }

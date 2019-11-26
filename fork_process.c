@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fork_process.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/26 12:25:03 by bpole             #+#    #+#             */
+/*   Updated: 2019/11/26 12:25:26 by bpole            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "minishell.h"
 
 static void			built_handler(int sig)
@@ -9,7 +21,7 @@ static void			built_handler(int sig)
 	}
 }
 
-int			run_process(char **com, char *executable, t_st *st)
+int					run_process(char **com, char *executable, t_st *st)
 {
 	pid_t			pid;
 
@@ -20,7 +32,7 @@ int			run_process(char **com, char *executable, t_st *st)
 		if (execve(st->tmp, com, st->env) == -1)
 		{
 			ft_fprintf(1, RED"minishell: permission denied: %s"RESET"\n",
-					   executable);
+					executable);
 			exit(1);
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:32:45 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/26 12:20:37 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/26 12:36:18 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int			set_path_bin(t_st *st)
 {
-	int			i;
+	int				i;
 
 	ft_free_char_arr(&st->path_bin);
 	i = 0;
@@ -50,18 +50,19 @@ static int			check_executable(char **com, char *executable, t_st *st)
 				return (run_process(com, executable, st));
 			else
 				ft_fprintf(1,
-					RED"minishell: permission denied: %s"RESET"\n", executable);
+						RED"minishell: permission denied: %s"RESET"\n",
+						executable);
 		}
 		i++;
 	}
 	return (0);
 }
 
-int 	f(char **com, char *executable, t_st *st)
+static int			check_access(char **com, char *executable, t_st *st)
 {
-	struct stat stats;
-	char		**arr;
-	int			i;
+	struct stat		stats;
+	char			**arr;
+	int				i;
 
 	if (access(executable, F_OK) != -1 && lstat(executable, &stats) != -1)
 	{
@@ -75,20 +76,20 @@ int 	f(char **com, char *executable, t_st *st)
 				i++;
 			if (arr && i && arr[i - 1])
 				ft_fprintf(1, RED"minishell: permission denied: %s"RESET"\n",
-						   arr[i - 1]);
+						arr[i - 1]);
 			ft_free_char_arr(&arr);
 		}
 	}
 	else
 		ft_printf(RED"minishell: no such file or directory: %s"RESET"\n",
-				  executable);
+				executable);
 	return (1);
 }
 
 int					do_executab_proc(char **com, char *executab, t_st *st)
 {
-	char		*path;
-	char		buff[BUFF_PATH + 1];
+	char			*path;
+	char			buff[BUFF_PATH + 1];
 
 	if (ft_strchr(executab, '/'))
 	{
@@ -102,7 +103,7 @@ int					do_executab_proc(char **com, char *executab, t_st *st)
 			ft_strcat(st->tmp, "/");
 			ft_strcat(st->tmp, executab);
 		}
-		return (f(com, executab, st));
+		return (check_access(com, executab, st));
 	}
 	else
 	{

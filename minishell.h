@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:39:18 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/26 12:18:19 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/26 12:28:03 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef struct	s_st
 	char		**commands;
 	char		**path_bin;
 	char		*tmp;
-	char        *old_dir;
+	char		*old_dir;
 	int			len_env;
 	int			count_args;
 }				t_st;
@@ -90,6 +90,6 @@ int				parse_commands(t_st *st);
 */
 void			free_st(t_st *st);
 void			ft_free_char_arr(char ***arr);
-char		    *find_env_valiable(t_st *st, char *env_variable);
+char			*find_env_valiable(t_st *st, char *env_variable);
 
 #endif

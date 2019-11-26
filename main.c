@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:37:15 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/26 10:40:07 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/26 12:28:30 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void		init_env(t_st *st, char **envv)
 {
 	int			i;
-	char        *tmp;
+	char		*tmp;
 
 	st->len_env = 0;
 	st->tmp = ft_strnew(PATH_MAX);
@@ -31,7 +31,7 @@ static void		init_env(t_st *st, char **envv)
 		i++;
 	}
 	tmp = find_env_valiable(st, "HOME=");
-    st->old_dir = ft_strdup(tmp);
+	st->old_dir = ft_strdup(tmp);
 }
 
 static void		output_invitation(void)
