@@ -31,6 +31,11 @@ CMakeFiles/my_minishell.dir/double_split.c.o
  /Users/bpole/CLionProjects/my_minishell/ft_printf/ft_printf.h
  /Users/bpole/CLionProjects/my_minishell/ft_printf/libft/libft.h
  /Users/bpole/CLionProjects/my_minishell/minishell.h
+CMakeFiles/my_minishell.dir/fork_process.c.o
+ /Users/bpole/CLionProjects/my_minishell/fork_process.c
+ /Users/bpole/CLionProjects/my_minishell/ft_printf/ft_printf.h
+ /Users/bpole/CLionProjects/my_minishell/ft_printf/libft/libft.h
+ /Users/bpole/CLionProjects/my_minishell/minishell.h
 CMakeFiles/my_minishell.dir/ft_printf/bonus_wildcard.c.o
  /Users/bpole/CLionProjects/my_minishell/ft_printf/bonus_wildcard.c
  /Users/bpole/CLionProjects/my_minishell/ft_printf/ft_printf.h

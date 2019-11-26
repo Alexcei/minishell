@@ -98,6 +98,9 @@
 		<Unit filename="/Users/bpole/CLionProjects/my_minishell/double_split.c">
 			<Option target="my_minishell"/>
 		</Unit>
+		<Unit filename="/Users/bpole/CLionProjects/my_minishell/fork_process.c">
+			<Option target="my_minishell"/>
+		</Unit>
 		<Unit filename="/Users/bpole/CLionProjects/my_minishell/ft_printf/bonus_wildcard.c">
 			<Option target="my_minishell"/>
 		</Unit>

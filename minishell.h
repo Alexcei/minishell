@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:39:18 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/25 16:53:20 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/26 12:18:19 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void			do_cd(char **com, t_st *st);
 /*
 **				do_executable.c
 */
-int				do_executable_process(char **com, char *executable, t_st *st);
+int				do_executab_proc(char **com, char *executab, t_st *st);
 
 /*
 **				do_setenv.c
@@ -74,6 +74,11 @@ void			do_unsetenv(char **com, t_st *st);
 **				double_split.c
 */
 char			**ft_double_split(char const *s, char c1, char c2);
+
+/*
+**				fork_process.c
+*/
+int				run_process(char **com, char *executable, t_st *st);
 
 /*
 **				parse.c

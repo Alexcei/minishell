@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/bpole/CLionProjects/my_minishell/do_setenv.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/do_setenv.c.o"
   "/Users/bpole/CLionProjects/my_minishell/do_unsetenv.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/do_unsetenv.c.o"
   "/Users/bpole/CLionProjects/my_minishell/double_split.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/double_split.c.o"
+  "/Users/bpole/CLionProjects/my_minishell/fork_process.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/fork_process.c.o"
   "/Users/bpole/CLionProjects/my_minishell/ft_printf/bonus_wildcard.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/ft_printf/bonus_wildcard.c.o"
   "/Users/bpole/CLionProjects/my_minishell/ft_printf/ft_fprintf.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/ft_printf/ft_fprintf.c.o"
   "/Users/bpole/CLionProjects/my_minishell/ft_printf/ft_printf.c" "/Users/bpole/CLionProjects/my_minishell/cmake-build-debug/CMakeFiles/my_minishell.dir/ft_printf/ft_printf.c.o"

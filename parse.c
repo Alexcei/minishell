@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:41:42 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/25 15:52:59 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/26 10:40:07 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int		apply_command(char **com, char *command, t_st *st)
 		do_setenv(com, st);
 	else if (ft_strequ(com[0], "unsetenv"))
 		do_unsetenv(com, st);
-	else if (do_executable_process(com, com[0], st))
+	else if (do_executab_proc(com, com[0], st))
 		return (0);
 	else
 		ft_printf(RED"minishell: command not found: %s"RESET"\n", com[0]);

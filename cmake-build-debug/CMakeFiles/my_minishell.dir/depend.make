@@ -31,6 +31,11 @@ CMakeFiles/my_minishell.dir/double_split.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/my_minishell.dir/double_split.c.o: ../ft_printf/libft/libft.h
 CMakeFiles/my_minishell.dir/double_split.c.o: ../minishell.h
 
+CMakeFiles/my_minishell.dir/fork_process.c.o: ../fork_process.c
+CMakeFiles/my_minishell.dir/fork_process.c.o: ../ft_printf/ft_printf.h
+CMakeFiles/my_minishell.dir/fork_process.c.o: ../ft_printf/libft/libft.h
+CMakeFiles/my_minishell.dir/fork_process.c.o: ../minishell.h
+
 CMakeFiles/my_minishell.dir/ft_printf/bonus_wildcard.c.o: ../ft_printf/bonus_wildcard.c
 CMakeFiles/my_minishell.dir/ft_printf/bonus_wildcard.c.o: ../ft_printf/ft_printf.h
 CMakeFiles/my_minishell.dir/ft_printf/bonus_wildcard.c.o: ../ft_printf/libft/libft.h

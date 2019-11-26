@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_minishell.dir/do_setenv.c.o"
   "CMakeFiles/my_minishell.dir/do_unsetenv.c.o"
   "CMakeFiles/my_minishell.dir/double_split.c.o"
+  "CMakeFiles/my_minishell.dir/fork_process.c.o"
   "CMakeFiles/my_minishell.dir/ft_printf/bonus_wildcard.c.o"
   "CMakeFiles/my_minishell.dir/ft_printf/ft_fprintf.c.o"
   "CMakeFiles/my_minishell.dir/ft_printf/ft_printf.c.o"

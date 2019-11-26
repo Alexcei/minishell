@@ -11,4 +11,4 @@ file(GLOB FILES
 
 set(CMAKE_C_STANDARD 99)
 add_definitions(-Wall -Wextra -Werror)
-add_executable(my_minishell ${FILES} double_split.c do_cd.c)
+add_executable(my_minishell ${FILES})

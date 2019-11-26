@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:42:28 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/25 17:28:03 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/26 10:40:07 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ char		*find_env_valiable(t_st *st, char *env_variable)
             return(st->env[i] + len);
         i++;
     }
-    ft_printf(RED"variable \"%.*s\" not found"RESET"\n", len - 1, env_variable);
+    ft_printf(RED"variable \"%.*s\" not found"RESET"\n",
+    		len - 1, env_variable);
     return (NULL);
 }

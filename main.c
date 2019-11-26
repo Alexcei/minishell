@@ -6,7 +6,7 @@
 /*   By: bpole <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 23:37:15 by bpole             #+#    #+#             */
-/*   Updated: 2019/11/25 17:04:17 by bpole            ###   ########.fr       */
+/*   Updated: 2019/11/26 10:40:07 by bpole            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ static void		init_env(t_st *st, char **envv)
 	while (envv[i])
 	{
 		st->env[i] = ft_strdup(envv[i]);
+		if (ft_strnequ(st->env[i], "PATH=", 5))
+			st->path_bin = ft_strsplit(st->env[i] + 5, ':');
 		i++;
 	}
 	tmp = find_env_valiable(st, "HOME=");

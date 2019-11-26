@@ -285,6 +285,33 @@ double_split.c.s:
 	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/double_split.c.s
 .PHONY : double_split.c.s
 
+fork_process.o: fork_process.c.o
+
+.PHONY : fork_process.o
+
+# target to build an object file
+fork_process.c.o:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/fork_process.c.o
+.PHONY : fork_process.c.o
+
+fork_process.i: fork_process.c.i
+
+.PHONY : fork_process.i
+
+# target to preprocess a source file
+fork_process.c.i:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/fork_process.c.i
+.PHONY : fork_process.c.i
+
+fork_process.s: fork_process.c.s
+
+.PHONY : fork_process.s
+
+# target to generate assembly for a file
+fork_process.c.s:
+	$(MAKE) -f CMakeFiles/my_minishell.dir/build.make CMakeFiles/my_minishell.dir/fork_process.c.s
+.PHONY : fork_process.c.s
+
 ft_printf/bonus_wildcard.o: ft_printf/bonus_wildcard.c.o
 
 .PHONY : ft_printf/bonus_wildcard.o
@@ -2445,6 +2472,9 @@ help:
 	@echo "... double_split.o"
 	@echo "... double_split.i"
 	@echo "... double_split.s"
+	@echo "... fork_process.o"
+	@echo "... fork_process.i"
+	@echo "... fork_process.s"
 	@echo "... ft_printf/bonus_wildcard.o"
 	@echo "... ft_printf/bonus_wildcard.i"
 	@echo "... ft_printf/bonus_wildcard.s"

@@ -6,11 +6,31 @@
 
 #IncludeRegexTransform: 
 
+/Users/bpole/CLionProjects/my_minishell/do_builds.c
+minishell.h
+/Users/bpole/CLionProjects/my_minishell/minishell.h
+
 /Users/bpole/CLionProjects/my_minishell/do_cd.c
 minishell.h
 /Users/bpole/CLionProjects/my_minishell/minishell.h
 
 /Users/bpole/CLionProjects/my_minishell/do_executable.c
+minishell.h
+/Users/bpole/CLionProjects/my_minishell/minishell.h
+
+/Users/bpole/CLionProjects/my_minishell/do_setenv.c
+minishell.h
+/Users/bpole/CLionProjects/my_minishell/minishell.h
+
+/Users/bpole/CLionProjects/my_minishell/do_unsetenv.c
+minishell.h
+/Users/bpole/CLionProjects/my_minishell/minishell.h
+
+/Users/bpole/CLionProjects/my_minishell/double_split.c
+minishell.h
+/Users/bpole/CLionProjects/my_minishell/minishell.h
+
+/Users/bpole/CLionProjects/my_minishell/fork_process.c
 minishell.h
 /Users/bpole/CLionProjects/my_minishell/minishell.h
 
@@ -29,6 +49,10 @@ unistd.h
 -
 fcntl.h
 /Users/bpole/CLionProjects/my_minishell/ft_printf/libft/fcntl.h
+
+/Users/bpole/CLionProjects/my_minishell/main.c
+minishell.h
+/Users/bpole/CLionProjects/my_minishell/minishell.h
 
 /Users/bpole/CLionProjects/my_minishell/minishell.h
 ft_printf/ft_printf.h

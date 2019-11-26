@@ -17,7 +17,7 @@ LIB_DIR = ./ft_printf/
 LIBFT = $(LIB_DIR)libftprintf.a
 
 SRC = main.c do_builds.c utils.c do_unsetenv.c do_setenv.c \
-        do_executable.c parse.c double_split.c do_cd.c
+        do_executable.c parse.c double_split.c do_cd.c fork_process.c
 
 OBJ = $(SRC:.c=.o)
 
